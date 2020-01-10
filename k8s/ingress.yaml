@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: nginx-php-ingress
+
+spec:
+  rules:
+  - host: ${YOUR HOST}
+    http:
+      paths:
+      - backend:
+          serviceName: nginx-php-svc
+          servicePort: 80
